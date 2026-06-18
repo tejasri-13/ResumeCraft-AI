@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ResumeCraft AI — Smart Resume Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#home">
+      <span class="brand-dot"></span>
+      ResumeCraft <em>AI</em>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#builder" class="nav-link">Builder</a></li>
+      <li><a href="#templates" class="nav-link">Templates</a></li>
+      <li><a href="#preview" class="nav-link">Preview</a></li>
+    </ul>
+    <button class="nav-cta" onclick="smoothScroll('#builder')">Start Building</button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" onclick="closeMobile()">Home</a>
+    <a href="#builder" onclick="closeMobile()">Builder</a>
+    <a href="#templates" onclick="closeMobile()">Templates</a>
+    <a href="#preview" onclick="closeMobile()">Preview</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-bg">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="grid-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">✦ AI-Powered Resume Studio</div>
+    <h1 class="hero-title">
+      Land your<br>
+      <span class="gradient-text">dream job</span><br>
+      with a resume<br>that works.
+    </h1>
+    <p class="hero-sub">Build ATS-optimized resumes in minutes. Live preview, smart scoring, professional templates.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="smoothScroll('#builder')">
+        Build My Resume
+        <span class="btn-arrow">→</span>
+      </button>
+      <button class="btn-ghost" onclick="smoothScroll('#templates')">Browse Templates</button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">20+</span><span class="stat-label">Templates</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-num">ATS</span><span class="stat-label">Optimized</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-num">Free</span><span class="stat-label">Downloads</span></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="resume-card-mockup">
+      <div class="rcm-header">
+        <div class="rcm-avatar">TS</div>
+        <div>
+          <div class="rcm-name">Tejasri</div>
+          <div class="rcm-role">Software Engineer</div>
+        </div>
+        <div class="rcm-score-badge">
+          <svg viewBox="0 0 36 36" width="44" height="44">
+            <circle cx="18" cy="18" r="15" fill="none" stroke="#e2e8f0" stroke-width="3"/>
+            <circle cx="18" cy="18" r="15" fill="none" stroke="#6366f1" stroke-width="3"
+              stroke-dasharray="85 100" stroke-dashoffset="25" stroke-linecap="round"/>
+          </svg>
+          <span>85</span>
+        </div>
+      </div>
+      <div class="rcm-divider"></div>
+      <div class="rcm-section-label">Skills</div>
+      <div class="rcm-tags">
+        <span>React</span><span>Node.js</span><span>Python</span><span>AWS</span>
+      </div>
+      <div class="rcm-section-label" style="margin-top:12px">Experience</div>
+      <div class="rcm-exp">
+        <div class="rcm-exp-dot"></div>
+        <div>
+          <div class="rcm-exp-title">Senior Dev @ TechCo</div>
+          <div class="rcm-exp-sub">2022 – Present</div>
+        </div>
+      </div>
+      <div class="rcm-exp">
+        <div class="rcm-exp-dot"></div>
+        <div>
+          <div class="rcm-exp-title">Engineer @ StartupXYZ</div>
+          <div class="rcm-exp-sub">2020 – 2022</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="section-eyebrow">Why ResumeCraft AI</div>
+    <h2 class="section-title">Everything you need to get hired</h2>
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="feature-icon fi-purple">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+        </div>
+        <h3>ATS-Friendly Output</h3>
+        <p>Every template passes Applicant Tracking Systems. Your resume actually gets read.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon fi-blue">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+        </div>
+        <h3>Live Preview</h3>
+        <p>See every change instantly. No more guessing how your resume looks — edit and watch it update.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon fi-green">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <h3>Smart Scoring</h3>
+        <p>Get a real-time score with actionable feedback on what to add or improve.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon fi-orange">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"/></svg>
+        </div>
+        <h3>Auto-Save & Export</h3>
+        <p>Your data is saved automatically. Print or export your resume anytime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEMPLATES -->
+<section id="templates" class="templates">
+  <div class="container">
+    <div class="section-eyebrow">Templates</div>
+    <h2 class="section-title">Choose your style</h2>
+    <div class="template-tabs">
+      <button class="tab-btn active" data-tab="tech">Software & IT</button>
+      <button class="tab-btn" data-tab="student">Students</button>
+      <button class="tab-btn" data-tab="design">Design</button>
+    </div>
+    <div class="template-grid" id="templateGrid">
+      <!-- Filled by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- BUILDER + PREVIEW SPLIT -->
+<section id="builder" class="builder-section">
+  <div class="builder-header">
+    <div class="section-eyebrow">Resume Builder</div>
+    <h2 class="section-title">Fill in your details</h2>
+    <div class="theme-row">
+      <span>Theme:</span>
+      <button class="theme-pill active" data-theme="indigo" onclick="setTheme('indigo',this)">Indigo</button>
+      <button class="theme-pill" data-theme="emerald" onclick="setTheme('emerald',this)">Emerald</button>
+      <button class="theme-pill" data-theme="rose" onclick="setTheme('rose',this)">Rose</button>
+      <button class="theme-pill" data-theme="amber" onclick="setTheme('amber',this)">Amber</button>
+      <button class="theme-pill" data-theme="slate" onclick="setTheme('slate',this)">Dark</button>
+    </div>
+  </div>
+  <div class="builder-layout">
+    <!-- FORM -->
+    <div class="form-panel">
+      <div class="form-steps">
+        <div class="step active" data-step="1">
+          <div class="step-circle">1</div><span>Personal</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" data-step="2">
+          <div class="step-circle">2</div><span>Education</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" data-step="3">
+          <div class="step-circle">3</div><span>Experience</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" data-step="4">
+          <div class="step-circle">4</div><span>Skills</span>
+        </div>
+      </div>
+
+      <!-- Step 1: Personal -->
+      <div class="form-step active" id="step1">
+        <h3 class="form-group-title">Personal Information</h3>
+        <div class="field-row">
+          <div class="field-group">
+            <label>Full Name *</label>
+            <input type="text" id="fname" placeholder="Tejasri" oninput="liveUpdate()">
+          </div>
+          <div class="field-group">
+            <label>Job Title *</label>
+            <input type="text" id="ftitle" placeholder="Software Engineer" oninput="liveUpdate()">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label>Email *</label>
+            <input type="email" id="femail" placeholder="taju@email.com" oninput="liveUpdate()">
+          </div>
+          <div class="field-group">
+            <label>Phone</label>
+            <input type="text" id="fphone" placeholder="+91 9876543210" oninput="liveUpdate()">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label>Location</label>
+            <input type="text" id="flocation" placeholder="Mumbai, India" oninput="liveUpdate()">
+          </div>
+          <div class="field-group">
+            <label>LinkedIn</label>
+            <input type="text" id="flinkedin" placeholder="linkedin.com/in/alexsmith" oninput="liveUpdate()">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label>GitHub</label>
+            <input type="text" id="fgithub" placeholder="github.com/alexsmith" oninput="liveUpdate()">
+          </div>
+          <div class="field-group">
+            <label>Portfolio</label>
+            <input type="text" id="fportfolio" placeholder="alexsmith.dev" oninput="liveUpdate()">
+          </div>
+        </div>
+        <div class="field-group">
+          <label>Career Objective</label>
+          <textarea id="fobjective" rows="4" placeholder="Write a brief 2-3 sentence summary of your career goals and key strengths..." oninput="liveUpdate()"></textarea>
+        </div>
+        <div class="step-nav">
+          <span></span>
+          <button class="btn-next" onclick="goStep(2)">Next: Education →</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Education -->
+      <div class="form-step" id="step2">
+        <h3 class="form-group-title">Education</h3>
+        <div id="eduContainer">
+          <div class="edu-entry entry-block">
+            <div class="field-row">
+              <div class="field-group">
+                <label>Degree / Course</label>
+                <input type="text" class="edu-degree" placeholder="B.Tech Computer Science" oninput="liveUpdate()">
+              </div>
+              <div class="field-group">
+                <label>Institution</label>
+                <input type="text" class="edu-inst" placeholder="IIT Bombay" oninput="liveUpdate()">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label>Year</label>
+                <input type="text" class="edu-year" placeholder="2020 – 2024" oninput="liveUpdate()">
+              </div>
+              <div class="field-group">
+                <label>Grade / CGPA</label>
+                <input type="text" class="edu-grade" placeholder="8.5 / 10" oninput="liveUpdate()">
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn-add" onclick="addEdu()">+ Add Another Degree</button>
+        <div class="step-nav">
+          <button class="btn-back" onclick="goStep(1)">← Back</button>
+          <button class="btn-next" onclick="goStep(3)">Next: Experience →</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Experience & Projects -->
+      <div class="form-step" id="step3">
+        <h3 class="form-group-title">Work Experience</h3>
+        <div id="expContainer">
+          <div class="exp-entry entry-block">
+            <div class="field-row">
+              <div class="field-group">
+                <label>Job Title</label>
+                <input type="text" class="exp-title" placeholder="Software Engineer" oninput="liveUpdate()">
+              </div>
+              <div class="field-group">
+                <label>Company</label>
+                <input type="text" class="exp-company" placeholder="Google" oninput="liveUpdate()">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label>Duration</label>
+                <input type="text" class="exp-duration" placeholder="Jan 2022 – Present" oninput="liveUpdate()">
+              </div>
+              <div class="field-group">
+                <label>Location</label>
+                <input type="text" class="exp-loc" placeholder="Bengaluru, India" oninput="liveUpdate()">
+              </div>
+            </div>
+            <div class="field-group">
+              <label>Key Responsibilities / Achievements</label>
+              <textarea class="exp-desc" rows="3" placeholder="• Led development of X feature, resulting in Y% improvement..." oninput="liveUpdate()"></textarea>
+            </div>
+          </div>
+        </div>
+        <button class="btn-add" onclick="addExp()">+ Add Another Role</button>
+
+        <h3 class="form-group-title" style="margin-top:28px">Projects</h3>
+        <div id="projContainer">
+          <div class="proj-entry entry-block">
+            <div class="field-row">
+              <div class="field-group">
+                <label>Project Name</label>
+                <input type="text" class="proj-name" placeholder="AI Chat App" oninput="liveUpdate()">
+              </div>
+              <div class="field-group">
+                <label>Tech Stack</label>
+                <input type="text" class="proj-tech" placeholder="React, Node.js, MongoDB" oninput="liveUpdate()">
+              </div>
+            </div>
+            <div class="field-group">
+              <label>Description</label>
+              <textarea class="proj-desc" rows="2" placeholder="Built a real-time chat app with..." oninput="liveUpdate()"></textarea>
+            </div>
+            <div class="field-group">
+              <label>Link (optional)</label>
+              <input type="text" class="proj-link" placeholder="github.com/alex/chat-app" oninput="liveUpdate()">
+            </div>
+          </div>
+        </div>
+        <button class="btn-add" onclick="addProj()">+ Add Another Project</button>
+        <div class="step-nav">
+          <button class="btn-back" onclick="goStep(2)">← Back</button>
+          <button class="btn-next" onclick="goStep(4)">Next: Skills →</button>
+        </div>
+      </div>
+
+      <!-- Step 4: Skills & Extra -->
+      <div class="form-step" id="step4">
+        <h3 class="form-group-title">Skills</h3>
+        <div class="field-group">
+          <label>Technical Skills</label>
+          <input type="text" id="fskills" placeholder="JavaScript, Python, React, Node.js, SQL, Git..." oninput="liveUpdate()">
+          <span class="field-hint">Separate with commas</span>
+        </div>
+        <div class="field-group">
+          <label>Soft Skills</label>
+          <input type="text" id="fsoftskills" placeholder="Leadership, Problem Solving, Communication..." oninput="liveUpdate()">
+        </div>
+
+        <h3 class="form-group-title" style="margin-top:20px">Additional</h3>
+        <div class="field-group">
+          <label>Certifications</label>
+          <textarea id="fcerts" rows="3" placeholder="• AWS Certified Developer (2024)&#10;• Google Cloud Professional" oninput="liveUpdate()"></textarea>
+        </div>
+        <div class="field-group">
+          <label>Achievements & Awards</label>
+          <textarea id="fachieve" rows="3" placeholder="• Best Hackathon Project, HackBombay 2023&#10;• Dean's List 2022" oninput="liveUpdate()"></textarea>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label>Languages</label>
+            <input type="text" id="flangs" placeholder="English, Hindi, Marathi" oninput="liveUpdate()">
+          </div>
+          <div class="field-group">
+            <label>Hobbies (optional)</label>
+            <input type="text" id="fhobbies" placeholder="Open Source, Chess, Photography" oninput="liveUpdate()">
+          </div>
+        </div>
+        <div class="step-nav">
+          <button class="btn-back" onclick="goStep(3)">← Back</button>
+          <div class="final-btns">
+            <button class="btn-clear" onclick="clearAll()">Clear All</button>
+            <button class="btn-primary" onclick="window.print()">⬇ Download / Print</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREVIEW PANEL -->
+    <div class="preview-panel" id="preview">
+      <!-- Score HUD -->
+      <div class="score-hud">
+        <div class="score-ring">
+          <svg viewBox="0 0 80 80" width="80" height="80">
+            <circle cx="40" cy="40" r="34" fill="none" stroke="#e2e8f0" stroke-width="6"/>
+            <circle cx="40" cy="40" r="34" fill="none" id="scoreCircle"
+              stroke="#6366f1" stroke-width="6"
+              stroke-dasharray="0 214" stroke-dashoffset="53.5"
+              stroke-linecap="round" style="transition:stroke-dasharray 0.6s ease"/>
+          </svg>
+          <span class="score-num" id="scoreNum">0%</span>
+        </div>
+        <div class="score-details" id="scoreDetails">
+          <div class="score-label">Resume Score</div>
+          <div class="score-feedback" id="scoreFeedback">Fill in your details to get started</div>
+        </div>
+        <div class="score-checklist" id="scoreChecklist"></div>
+      </div>
+
+      <!-- Resume Output -->
+      <div class="resume-output" id="resumeOutput">
+        <div class="resume-placeholder">
+          <svg width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="#cbd5e1" stroke-width="1.5"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <p>Start filling your details<br>and your resume will appear here</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="brand">
+      <span class="brand-dot"></span>ResumeCraft <em>AI</em>
+    </div>
+    <p>Built for 3Skill Internship — Web Development Project</p>
+    <p style="color:#64748b;font-size:13px;margin-top:6px">© 2026 ResumeCraft AI. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
